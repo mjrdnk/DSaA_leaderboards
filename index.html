@@ -1,14 +1,66 @@
 <!doctype html>
-<head>
- 
-  <title>SCOREBOARD</title>
- 
-</head>
 
-<body>
-	<link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  	<script src="data.js"></script>
-  	<script src="app.js"></script>
-</body>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale-1">
+        <title>DSaA Classifields</title>        
+
+        <!-- Latest minified Bootstrap -->
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <!-- styles file -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+    </head>
+    
+    <body ng-app="application" ng-controller="controllerTableScores">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 center-block">
+                    <h1 class="text-center">Data Structures and Algorithms Classifields</h1>
+                    <br>
+                    <div class="input-group">
+                        <spam class="input-group-addon">Search: </spam>
+                        <input type="text" class="form-control" placeholder="Student identification number..." ng-model="searchEngine">
+                    </div>
+                    <br>
+                    <div class="class-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th ng-repeat="header in [
+                                    'studentNumber','points'
+                                    ]">
+                                    {{header}}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat='score in scores | filter : searchEngine'>
+                                    <td>{{score.studentNumber}}</td>
+                                    <td>{{score.points}}</td>
+                                </tr>
+                            </tbody>
+                    </div>
+
+                </div>
+            </div>
+        </div>        
+        
+        <!-- AngularJS -->
+        <script src="angular.min.js"></script>
+        <!-- jQuery (necesarry for Bootstrap's JavaSCript plugins) -->
+        <script src="jquery-1.12.0.min.js"></script>
+        <!-- Latest minified Bootstrap -->
+        <script src="bootstrap.min.js"></script>
+        <!-- hell's stored in here -->
+        <script src="data.js"></script>
+        <!-- Angular dataController and data management -->
+        <script src="dataController.js"></script>
+        
+
+    </body>
 </html>
