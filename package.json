@@ -1,0 +1,28 @@
+{
+  "name": "leaderboards-algorithms",
+  "version": "1.0.0",
+  "description": "DSaA scoreboards",
+  "main": "server.js",
+  "dependencies": {
+    "autoload": "^0.1.2",
+    "composer": "^0.11.4",
+    "express": "^4.13.4",
+    "jquery": "^2.2.3",
+    "vendor": "^0.0.2",
+    "vue": "^1.0.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjrdnk/leaderboards-algorithms.git"
+  },
+  "author": "mjrdnk & can vural",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjrdnk/leaderboards-algorithms/issues"
+  },
+  "homepage": "https://github.com/mjrdnk/leaderboards-algorithms#readme"
+}
