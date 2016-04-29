@@ -2,4 +2,5 @@
 composer.lock
 vendor/
 
+# Dependency directories
 node_modules
