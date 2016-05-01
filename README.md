@@ -5,7 +5,7 @@ you will need node.js and >=php5 to run the program
 
 After downloading+unpacking / cloning:
 
-1. In scraper.php file in line 13 put your credentials: yourLogin, yourPassword, inside the quotes.
+1. In scraper.php file in line 13 put your judgment system credentials: yourLogin, yourPassword, inside the quotes.
 
 2. Go into leaderboards-algorithms directory.
 
