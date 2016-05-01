@@ -3,11 +3,40 @@
  
   <title>SCOREBOARD</title>
  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+
 </head>
 
 <body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     
+  <div id="header">
+  	<h1>Welcome to scoreboards</h1>
+  </div>
 
-sdada
+  <div id="container">
+  	<ul id="scoreboard">
+  	  <li v-for="student in students">
+        <a href='./student'>{{ student.name }} {{ student.total_score }}</a>
+  	  </li>
+    </ul>
+  </div>
+
+  <script>
+
+  var server = require(['../server']);
+  var data = server.data;
+
+	var scoreboards = new Vue({
+		el: '#scoreboard',
+		data: {
+			students: data
+		}
+	});
+  </script>
+
+
 </body>
 </html>

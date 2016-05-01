@@ -1,15 +1,17 @@
 var express = require('express');
+var vue = require('vue');
 var fs = require('fs');
+var requirejs = require('requirejs');
 
 var app = express();
 
-app.use(express.static('public'));
+app.use(express.static('/'))
+   .use(express.static(__dirname + '/public'));
 
-var students;
-fs.readFile('./dsa.json', 'utf8', function (err, data) {
+var data;
+fs.readFile('./dsa.json', 'utf8', (err, data) => {
   if (err) throw err;
-  students = JSON.parse(data);
-  console.log(students);
+  exports.data = data;
 });
 
 app.listen(3000, () => {
