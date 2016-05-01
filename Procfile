@@ -1,1 +1,1 @@
-web: node server.js
+web: php scraper.php | node server.js
