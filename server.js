@@ -8,10 +8,10 @@ var app = express();
 app.use(express.static('/'))
    .use(express.static(__dirname + '/public'));
 
-var data;
-fs.readFile('./dsa.json', 'utf8', (err, data) => {
-  if (err) throw err;
-  exports.data = data;
+var data = fs.readFileSync('./dsa.json', 'utf8');
+
+app.get('/json', function(req, res){
+  res.send(data);
 });
 
 app.listen(3000, () => {

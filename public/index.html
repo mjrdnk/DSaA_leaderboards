@@ -26,15 +26,21 @@
 
   <script>
 
-  var server = require(['../server']);
-  var data = server.data;
-
-	var scoreboards = new Vue({
-		el: '#scoreboard',
-		data: {
-			students: data
-		}
-	});
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/json', true);
+  xhr.addEventListener('load', function() {
+    var scoreboards = new Vue({
+      el: '#scoreboard',
+      data: {
+          students: JSON.parse(xhr.response)
+      }
+    });
+  });
+  xhr.addEventListener('error', function() {
+  // handle error
+  });
+  xhr.send();
+  
   </script>
 
 
