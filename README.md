@@ -18,3 +18,6 @@ After downloading+unpacking / cloning:
   node app
 
 4. Open localhost:3000 in your browser.
+
+
+Don't forget to erase your judgment system credentials when pushing back.
