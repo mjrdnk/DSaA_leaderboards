@@ -10,7 +10,7 @@ $crawler = $client->request('GET', 'http://zawody2012.win.ii.pwr.wroc.pl/domjudg
 
 $form = $crawler->selectButton('Login')->form();
 
-$crawler = $client->submit($form, array('login' => 'yourLogin', 'passwd' => 'yourPassword')); // put your credentials: yourLogin, yourPassword
+$crawler = $client->submit($form, array('login' => 'a184734', 'passwd' => 'nhz9mq')); // put your credentials: yourLogin, yourPassword
 $crawler = $client->request('GET', 'http://zawody2012.win.ii.pwr.wroc.pl/domjudge/team/scoreboard.php');
 
 $userInfo = $crawler->filter('table.scoreboard tbody tr')->each(function($node, $i) use($client) {
