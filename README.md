@@ -5,9 +5,11 @@ you will need node.js and >=php5 to run the program
 
 After downloading+unpacking / cloning:
 
-1. Go into leaderboards-algorithms directory.
+1. In scraper.php file in line 13 put your credentials: yourLogin, yourPassword, inside the quotes.
 
-2. Run in the console in the project directory:
+2. Go into leaderboards-algorithms directory.
+
+3. Run in the console in the project directory:
 
   npm install
   
@@ -15,4 +17,4 @@ After downloading+unpacking / cloning:
   
   node app
 
-3. Open localhost:3000 in your browser.
+4. Open localhost:3000 in your browser.
